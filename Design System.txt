@@ -1,0 +1,97 @@
+# Design System — Landing Page Jaqueline Santinho
+
+Extraído a partir das imagens de referência (site ISA). A estética "verde orgânico / natureza" combina bem com o tema ambiental do serviço da Jaqueline — por isso mantive a paleta praticamente igual à referência, só ajustando o foco pra deixar o botão do WhatsApp como o elemento mais visível da página.
+
+---
+
+## 1. Cores
+
+### Paleta principal
+| Uso | Cor | Hex |
+|---|---|---|
+| Verde escuro (headlines, fundo de seções de destaque, botão primário) | 🟩 | `#112F20` |
+| Verde principal (CTA, links, ícones, detalhes) | 🟢 | `#0A775A` |
+| Verde claro / menta (fundos suaves, badges, blocos de respiro) | 🟢 | `#CEE4DE` |
+
+### Cores neutras
+| Uso | Cor | Hex |
+|---|---|---|
+| Texto secundário / descrições | ⚪ | `#83847F` |
+| Fundo alternativo de seção | ⚪ | `#F1F1F1` |
+| Fundo base / cards | ⚪ | `#FFFFFF` |
+
+### Cor de suporte (recomendação)
+O ícone do botão de WhatsApp pode usar o verde oficial do app (`#25D366`) só no ícone, mantendo o fundo do botão no verde da marca (`#0A775A` ou `#112F20`). Isso deixa o botão reconhecível como "WhatsApp" sem quebrar a paleta do site.
+
+---
+
+## 2. Tipografia
+
+**Fonte da referência:** Mulish (Google Fonts, gratuita, pesos Bold / Semibold / Medium).
+
+**Alternativas parecidas**, caso queira variar: Manrope, DM Sans, Inter — todas humanistas, geométricas, boa leitura em telas pequenas.
+
+### Hierarquia sugerida
+
+| Elemento | Peso | Tamanho desktop | Tamanho mobile | Cor |
+|---|---|---|---|---|
+| H1 (headline hero) | Bold | 44–52px | 28–32px | `#112F20` |
+| H2 (título de seção) | Bold/Semibold | 28–32px | 22–24px | `#112F20` |
+| H3 (título de card) | Semibold | 18–20px | 16–18px | `#112F20` |
+| Corpo de texto | Medium/Regular | 16px | 15px | `#83847F` |
+| Legenda / meta (badges, labels) | Semibold, uppercase, letter-spacing 0.5px | 12–13px | 11–12px | `#0A775A` |
+| Texto de botão | Semibold | 15–16px | 15px | branco ou `#112F20` |
+
+Altura de linha: 1.1–1.2 em headlines, 1.5–1.6 em corpo de texto.
+
+---
+
+## 3. Componentes
+
+### Botões
+- **Formato:** pill (border-radius total, ~999px), altura entre 48–56px — grande o suficiente pra ser confortável no toque mobile.
+- **Primário (usar no CTA do WhatsApp):** fundo `#0A775A` ou `#112F20`, texto branco, ícone de WhatsApp à esquerda do texto, seta ou nada à direita.
+- **Secundário/outline:** borda 1.5px `#0A775A`, fundo transparente, texto `#0A775A`. Usar só pra ações menos importantes (ex: "Ver áreas de atuação"), nunca competindo com o CTA principal.
+- **Hover:** escurecer o fundo ~10% ou preencher o outline.
+- **Estado sticky:** o botão do WhatsApp deve existir fixo — no header no desktop, flutuante no canto inferior direito no mobile — sempre visível, independente do scroll.
+
+### Inputs (se houver formulário)
+- Cantos arredondados médios (12–16px, menor que o botão, pra não competir visualmente).
+- Borda 1px em cinza claro (`#E4E4E0`, tom derivado do `#F1F1F1`).
+- Fundo branco, padding generoso (14–16px).
+- Foco: borda `#0A775A` + leve sombra verde.
+
+### Cards
+- Cantos bem arredondados (20–24px), incluindo a imagem interna.
+- Imagem no topo, badge pequeno sobreposto (pill branco ou verde claro, texto minúsculo maiúsculo).
+- Padding interno 24px.
+- Sombra quase imperceptível: `0 8px 24px rgba(17,47,32,0.06)`.
+- CTA dentro do card em formato outline, menor que o CTA principal da página.
+
+---
+
+## 4. Estética
+
+### Border-radius
+- Botões e badges: pill (999px).
+- Cards e imagens: 20–24px.
+- Blocos de imagem hero: cortes diagonais/assimétricos com raio grande em pelo menos dois cantos — dá o efeito orgânico visto na referência.
+
+### Sombras
+- Sutis, quase decorativas, nunca duras: `0 8px 24px rgba(17,47,32,0.06)`.
+- Elementos flutuantes sobre imagem (ex: badges, pills de destaque) podem usar efeito glass: fundo semi-transparente escuro + blur, tipo `rgba(17,47,32,0.4)` com `backdrop-filter: blur(8px)`.
+
+### Espaçamento
+- Respiro grande entre seções: 96–120px no desktop, 56–64px no mobile.
+- Gutter entre colunas: 24–32px.
+- Padding interno de cards: 24–32px.
+
+---
+
+## 5. Aplicação direta no foco do projeto: clique no WhatsApp
+
+- O botão do WhatsApp é o único CTA em destaque total (cor sólida). Qualquer outro botão na página fica em outline, pra não dividir a atenção.
+- Repetir o mesmo botão, com o mesmo texto e cor, em pelo menos 3 pontos: header (fixo), meio da página (depois da seção de dor) e no final.
+- Área de toque mínima de 48x48px, respeitando acessibilidade mobile.
+- Espaço em branco generoso ao redor do botão — nada de elemento concorrendo por atenção a menos de 24px de distância.
+- Ícone do WhatsApp sempre visível dentro do botão, não só o texto "Falar no WhatsApp".

@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#112F20" />
+  <meta name="description" content="Jaqueline Santinho — Engenheira Química. Consultoria em licenciamento ambiental junto à Polícia Civil, Exército, Polícia Federal, CETESB, Prefeituras e IBAMA." />
+  <title>Jaqueline Santinho — Consultoria em Licenciamento Ambiental</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+
+  <style>
+    /* ==========================================================
+       DESIGN TOKENS
+       ========================================================== */
+    :root {
+      --color-dark: #112F20;
+      --color-primary: #0A775A;
+      --color-primary-hover: #085F48;
+      --color-mint: #CEE4DE;
+      --color-text: #83847F;
+      --color-bg-alt: #F1F1F1;
+      --color-white: #FFFFFF;
+      --color-paper: #FBF6EA;
+      --color-paper-alt: #F3ECDA;
+      --color-border: #E6E1D0;
+      --color-wa: #25D366;
+
+      --radius-pill: 999px;
+      --radius-card: 24px;
+      --radius-input: 14px;
+
+      --shadow-soft: 0 8px 24px rgba(17, 47, 32, 0.06);
+      --shadow-hover: 0 12px 32px rgba(17, 47, 32, 0.12);
+      --shadow-float: 0 12px 28px rgba(10, 119, 90, 0.35);
+
+      --font-base: 'Mulish', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+      --container: 1160px;
+      --section-py-mobile: 40px;
+      --section-py-desktop: 72px;
+
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ==========================================================
+       RESET & BASE
+       ========================================================== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: var(--font-base);
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--color-text);
+      background-color: var(--color-paper);
+      background-image:
+        radial-gradient(1200px 800px at 100% 0%, rgba(206, 228, 222, 0.18), transparent 60%),
+        radial-gradient(900px 700px at 0% 100%, rgba(243, 236, 218, 0.5), transparent 60%),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.35  0 0 0 0 0.28  0 0 0 0 0.12  0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      background-attachment: fixed, fixed, fixed;
+      background-size: auto, auto, 240px 240px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img, svg { max-width: 100%; display: block; }
+    figure { margin: 0; }
+    a { color: var(--color-primary); text-decoration: none; transition: color .2s var(--ease); }
+    a:hover { color: var(--color-primary-hover); }
+    ul { padding: 0; margin: 0; list-style: none; }
+
+    h1, h2, h3 {
+      color: var(--color-dark);
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 0 0 16px;
+      letter-spacing: -0.01em;
+    }
+    p { margin: 0 0 16px; }
+
+    :focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 12px 20px;
+      z-index: 1000;
+      border-radius: 0 0 var(--radius-input) 0;
+      font-weight: 700;
+    }
+    .skip-link:focus { left: 0; color: var(--color-white); }
+
+    .container {
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    section { padding: var(--section-py-mobile) 0; }
+
+    /* ==========================================================
+       BUTTONS
+       ========================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 26px;
+      border-radius: var(--radius-pill);
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+      transition: background .25s var(--ease), color .25s var(--ease), transform .2s var(--ease), box-shadow .25s var(--ease);
+      will-change: transform;
+      text-decoration: none;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: var(--color-white);
+      box-shadow: var(--shadow-float);
+    }
+    .btn-primary:hover { background: var(--color-primary-hover); color: var(--color-white); box-shadow: var(--shadow-hover); }
+
+    .btn-dark {
+      background: var(--color-dark);
+      color: var(--color-white);
+    }
+    .btn-dark:hover { background: #0a1f16; color: var(--color-white); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--color-primary);
+      border: 1.5px solid var(--color-primary);
+    }
+    .btn-outline:hover { background: var(--color-primary); color: var(--color-white); }
+
+    .btn-header {
+      min-height: 44px;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+    .btn-header.btn-primary {
+      color: var(--color-dark);
+      background: var(--color-mint);
+      box-shadow: 0 6px 16px rgba(206, 228, 222, 0.5);
+    }
+    .btn-header.btn-primary:hover {
+      background: var(--color-white);
+      color: var(--color-dark);
+    }
+    .btn-header.btn-primary .wa-icon { background: var(--color-primary); fill: var(--color-white); }
+
+    .btn .wa-icon { fill: var(--color-wa); flex-shrink: 0; }
+    .btn-primary .wa-icon, .btn-dark .wa-icon { background: var(--color-white); border-radius: 50%; padding: 2px; }
+
+    /* ==========================================================
+       HEADER
+       ========================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(251, 246, 234, 0.9);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(17, 47, 32, 0.06);
+      z-index: 100;
+      transition: box-shadow .3s var(--ease), background .3s var(--ease);
+    }
+    .site-header.is-scrolled {
+      background: rgba(251, 246, 234, 0.96);
+      box-shadow: 0 6px 20px rgba(17, 47, 32, 0.06);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0;
+      gap: 20px;
+    }
+    .site-header .container { padding-left: 32px; padding-right: 32px; }
+    @media (min-width: 768px) {
+      .site-header .container { padding-left: 48px; padding-right: 48px; }
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      color: var(--color-dark);
+      font-weight: 800;
+      font-size: 17px;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .logo span {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 3px;
+    }
+    .nav-desktop { display: none; }
+    .nav-desktop ul {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-desktop a {
+      color: var(--color-dark);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 0;
+      position: relative;
+    }
+    .nav-desktop a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: 2px;
+      width: 0; height: 2px;
+      background: var(--color-primary);
+      transition: width .25s var(--ease);
+    }
+    .nav-desktop a:hover::after, .nav-desktop a:focus-visible::after { width: 100%; }
+
+    .header-cta { display: none; }
+
+    .menu-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 1.5px solid var(--color-dark);
+      border-radius: var(--radius-pill);
+      color: var(--color-dark);
+      cursor: pointer;
+      transition: background .2s var(--ease), color .2s var(--ease);
+    }
+    .menu-toggle:hover { background: var(--color-dark); color: var(--color-white); }
+    .menu-toggle svg { width: 20px; height: 20px; }
+
+    .nav-mobile {
+      position: fixed;
+      inset: 0;
+      background: var(--color-dark);
+      z-index: 200;
+      transform: translateY(-100%);
+      transition: transform .35s var(--ease);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .nav-mobile[data-open="true"] { transform: translateY(0); }
+    .nav-mobile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    .nav-mobile-header .logo, .nav-mobile-header .logo span { color: var(--color-white); }
+    .nav-mobile-header .logo span { color: var(--color-mint); }
+    .nav-mobile-close {
+      width: 44px; height: 44px;
+      background: transparent;
+      border: 1.5px solid var(--color-white);
+      color: var(--color-white);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-mobile ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }
+    .nav-mobile a {
+      color: var(--color-white);
+      font-size: 24px;
+      font-weight: 700;
+      padding: 14px 0;
+      display: block;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .nav-mobile a:hover { color: var(--color-mint); }
+    .nav-mobile .btn {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    /* ==========================================================
+       HERO
+       ========================================================== */
+    .hero {
+      padding: 0;
+      background: linear-gradient(135deg, #0A1F16 0%, #112F20 50%, #0A775A 100%);
+      overflow: hidden;
+      position: relative;
+      isolation: isolate;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero .container.hero-top {
+      padding-top: 16px;
+      padding-bottom: 8px;
+    }
+    .hero .container.hero-bottom {
+      padding-bottom: 76px;
+      padding-right: 92px;
+      margin-top: auto;
+    }
+    /* Full/short copy swap so the mobile hero stays compact */
+    .h1-short, .sub-short { display: none; }
+    @media (max-width: 767px) {
+      .h1-full, .sub-full { display: none; }
+      .h1-short, .sub-short { display: inline; }
+    }
+
+    /* Mobile hero: tighter type + more room for the video/face */
+    @media (max-width: 767px) {
+      .hero h1 { font-size: clamp(22px, 7.5vw, 30px); line-height: 1.15; margin-bottom: 12px; }
+      .hero .subhead { font-size: 14px; line-height: 1.45; margin-bottom: 18px; }
+      .hero-content { max-width: 100%; }
+      .hero-cta-row { gap: 10px; }
+      .hero-trust { margin-top: 14px; font-size: 12px; }
+      .hero .kicker { font-size: 11px; padding: 6px 12px; margin-bottom: 12px; }
+      /* Push content further down so face stays visible */
+      .hero .container.hero-bottom { padding-bottom: 60px; padding-right: 84px; }
+    }
+    .hero-scroll {
+      position: absolute;
+      left: 50%;
+      bottom: 20px;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.75);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      transition: color .25s var(--ease);
+      white-space: nowrap;
+    }
+    .hero-scroll:hover { color: var(--color-white); }
+    .hero-scroll .chevron {
+      width: 28px; height: 28px;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      animation: scroll-bounce 2.2s var(--ease) infinite;
+    }
+    .hero-scroll:hover .chevron { border-color: var(--color-white); }
+    @keyframes scroll-bounce {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(6px); }
+    }
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.55;
+      pointer-events: none;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg, rgba(10, 31, 22, 0) 0%, rgba(10, 31, 22, 0.15) 35%, rgba(10, 31, 22, 0.75) 75%, rgba(10, 31, 22, 0.92) 100%),
+        linear-gradient(105deg, rgba(10, 31, 22, 0.35) 0%, rgba(17, 47, 32, 0.15) 55%, rgba(10, 119, 90, 0.05) 100%);
+      pointer-events: none;
+    }
+    .hero .container { position: relative; z-index: 2; width: 100%; }
+    .hero-content {
+      max-width: 720px;
+    }
+    @media (min-width: 1024px) {
+      .hero h1 { font-size: clamp(38px, 4.2vw, 54px); line-height: 1.08; letter-spacing: -0.015em; max-width: 760px; }
+      .hero .subhead { font-size: 18px; line-height: 1.55; max-width: 640px; margin-bottom: 28px; }
+      .hero-content { max-width: 800px; }
+      .hero-cta-row { margin-top: 4px; }
+      .hero-trust { margin-top: 24px; }
+    }
+    .kicker {
+      display: inline-block;
+      color: var(--color-primary);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 8px 16px;
+      background: var(--color-mint);
+      border-radius: var(--radius-pill);
+      margin-bottom: 20px;
+    }
+    .hero .kicker {
+      background: rgba(206, 228, 222, 0.18);
+      color: var(--color-mint);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .hero h1 {
+      font-size: clamp(28px, 6vw, 52px);
+      margin-bottom: 20px;
+      color: var(--color-white);
+      text-shadow: 0 4px 30px rgba(0,0,0,0.35);
+    }
+    .hero .subhead {
+      font-size: 17px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.88);
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+    .hero .btn-outline {
+      color: var(--color-white);
+      border-color: rgba(255,255,255,0.5);
+    }
+    .hero .btn-outline:hover {
+      background: var(--color-white);
+      color: var(--color-dark);
+      border-color: var(--color-white);
+    }
+    .hero-cta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .hero-trust {
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .hero-trust::before {
+      content: '';
+      display: none;
+    }
+    .hero-trust .stars {
+      color: #FFC344;
+      letter-spacing: 2px;
+      font-size: 14px;
+      margin-right: 8px;
+      text-shadow: 0 1px 6px rgba(255, 195, 68, 0.35);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50%      { transform: translateY(-14px) rotate(6deg); }
+    }
+
+    /* ==========================================================
+       MARQUEE — órgãos parceiros
+       ========================================================== */
+    .marquee {
+      background: var(--color-mint);
+      padding: 24px 0;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid rgba(17,47,32,0.05);
+      border-bottom: 1px solid rgba(17,47,32,0.05);
+    }
+    .marquee::before,
+    .marquee::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .marquee::before { left: 0; background: linear-gradient(90deg, var(--color-mint), transparent); }
+    .marquee::after  { right: 0; background: linear-gradient(270deg, var(--color-mint), transparent); }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 32s linear infinite;
+      will-change: transform;
+    }
+    .marquee-list {
+      display: flex;
+      align-items: center;
+      gap: 56px;
+      padding: 0 28px;
+      margin: 0;
+      list-style: none;
+      flex-shrink: 0;
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--color-dark);
+      font-weight: 700;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+    .marquee-item img,
+    .marquee-item .marquee-icon {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .marquee-item .marquee-icon {
+      color: var(--color-primary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .marquee-item .marquee-icon svg { width: 26px; height: 26px; }
+    .marquee-sr {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0);
+      white-space: nowrap; border: 0;
+    }
+    @keyframes marquee-scroll {
+      from { transform: translateX(-50%); }
+      to   { transform: translateX(0);     }
+    }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track { animation: none; transform: translateX(0); }
+    }
+
+    /* ==========================================================
+       ABOUT
+       ========================================================== */
+    #sobre { padding: 24px 0; }
+    .about-grid {
+      display: grid;
+      gap: 16px;
+      align-items: center;
+    }
+    .about-text h2 { font-size: clamp(22px, 4.5vw, 32px); }
+    .about-text p { font-size: 16px; line-height: 1.65; }
+    .about-portrait {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      display: block;
+    }
+    .about-portrait img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+    /* Desktop: imagem ao lado do texto, centrada verticalmente */
+    @media (min-width: 768px) {
+      .about-grid { grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; }
+      .about-portrait { aspect-ratio: auto; width: 100%; max-width: 100%; height: auto; position: static; }
+      .about-text > div { margin-top: 20px; padding-top: 20px; }
+    }
+
+    /* ==========================================================
+       SCROLL VIDEO SECTION — full-width scrubbing video
+       ========================================================== */
+    .scroll-video-section {
+      position: relative;
+      background: var(--color-dark);
+      overflow: hidden;
+      padding: 0;
+    }
+    .scroll-video-section .video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      max-height: 80vh;
+      background: #000;
+      overflow: hidden;
+    }
+    .scroll-video-section video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      pointer-events: none;
+    }
+    .scroll-video-section .video-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(10,31,22,0.1) 70%, rgba(10,31,22,0.4) 100%);
+      pointer-events: none;
+    }
+    @media (max-width: 767px) {
+      .scroll-video-section .video-wrap { aspect-ratio: 3/4; max-height: 92vh; }
+      /* Center vertically so lamp on the left and Jaqueline on the right are both visible */
+      .scroll-video-section video { object-position: 40% center; }
+    }
+
+
+
+    /* ==========================================================
+       AREAS
+       ========================================================== */
+    .areas { background: var(--color-paper-alt); }
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 40px;
+    }
+    .section-head h2 { font-size: clamp(22px, 4.5vw, 32px); }
+    .section-head p { font-size: 16px; color: var(--color-text); }
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .area-card {
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    }
+    .area-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .area-icon {
+      width: 72px; height: 72px;
+      background: var(--color-mint);
+      color: var(--color-primary);
+      border-radius: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: transform .35s var(--ease), background .3s var(--ease);
+      position: relative;
+    }
+    .area-icon img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      transition: transform .5s var(--ease);
+    }
+    .area-icon.brasao-bg-dark {
+      background: var(--color-dark);
+    }
+    .area-card:hover .area-icon { transform: scale(1.05) rotate(-2deg); }
+    .area-card:hover .area-icon img { transform: scale(1.1); }
+    .area-card h3 { font-size: 18px; margin-bottom: 8px; }
+    .area-card p { font-size: 15px; margin: 0; color: var(--color-text); line-height: 1.55; }
+
+    /* ==========================================================
+       WHY
+       ========================================================== */
+    .why-grid {
+      display: grid;
+      gap: 40px;
+      align-items: center;
+    }
+    .why-text h2 { font-size: clamp(22px, 4.5vw, 32px); }
+    .why-text p { font-size: 16px; line-height: 1.65; }
+    .why-list { display: flex; flex-direction: column; gap: 14px; margin-top: 24px; }
+    .why-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      color: var(--color-dark);
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .why-list .check {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+
+    .why-highlight {
+      background: var(--color-mint);
+      border-radius: var(--radius-card);
+      padding: 32px;
+      color: var(--color-dark);
+    }
+    .why-highlight .metric {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .why-highlight p { color: var(--color-dark); font-weight: 600; margin: 0; }
+
+    /* ==========================================================
+       STEPS
+       ========================================================== */
+    .steps { background: var(--color-dark); color: var(--color-white); }
+    .steps .section-head { margin-bottom: 24px; }
+    .steps h2 { color: var(--color-white); font-size: clamp(22px, 4.5vw, 32px); margin-bottom: 12px; }
+    .steps-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .step {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 20px;
+      border-radius: 18px;
+      counter-increment: step;
+      position: relative;
+      transition: background .25s var(--ease), border-color .25s var(--ease);
+    }
+    .step:hover { background: rgba(255,255,255,0.07); border-color: rgba(206, 228, 222, 0.35); }
+    .step::before {
+      content: counter(step, decimal-leading-zero);
+      display: block;
+      color: var(--color-mint);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .step h3 { color: var(--color-white); font-size: 15px !important; margin-bottom: 6px !important; }
+    .step p { color: rgba(255,255,255,0.8); font-size: 14px; line-height: 1.45; margin: 0; }
+
+    /* ==========================================================
+       AUDIENCE
+       ========================================================== */
+    .audience { background: var(--color-paper-alt); }
+    .audience-inner {
+      background: var(--color-white);
+      border-radius: 32px;
+      padding: 40px 28px;
+      box-shadow: var(--shadow-soft);
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: stretch;
+      overflow: hidden;
+    }
+    .audience-text {
+      padding: 8px 4px;
+    }
+    .audience h2 { font-size: clamp(22px, 4.5vw, 32px); }
+    .audience p { font-size: 16px; line-height: 1.65; }
+    .audience-image {
+      position: relative;
+      aspect-ratio: 4/5;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      max-height: 420px;
+      background: linear-gradient(150deg, var(--color-mint) 0%, var(--color-primary) 100%);
+      border-radius: 24px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .audience-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.2), transparent 55%);
+      z-index: 1;
+    }
+    .audience-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      object-fit: cover;
+      object-position: center;
+      transform-origin: center 40%;
+      will-change: transform;
+      image-rendering: -webkit-optimize-contrast;
+    }
+    .audience-image .accent-leaf {
+      position: absolute;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .audience-image .accent-leaf.al1 { top: 16px; left: 16px; width: 46px; opacity: 0.55; animation: float 9s ease-in-out infinite; }
+    .audience-image .accent-leaf.al2 { top: 40%; right: 14px; width: 32px; opacity: 0.5; animation: float 8s ease-in-out infinite -2s; }
+    .audience-tags {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .audience-tags li {
+      background: var(--color-mint);
+      color: var(--color-dark);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ==========================================================
+       FAQ
+       ========================================================== */
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      transition: border-color .25s var(--ease), box-shadow .25s var(--ease);
+    }
+    .faq-item[open], .faq-item:hover {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-soft);
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-weight: 700;
+      color: var(--color-dark);
+      font-size: 16px;
+      min-height: 48px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '';
+      flex-shrink: 0;
+      width: 32px; height: 32px;
+      background: var(--color-mint);
+      color: var(--color-primary);
+      border-radius: 50%;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%230A775A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: transform .3s var(--ease);
+    }
+    .faq-item[open] summary::after { transform: rotate(180deg); }
+    .faq-item .faq-body {
+      padding: 0 24px 22px;
+      color: var(--color-text);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    /* ==========================================================
+       FINAL CTA
+       ========================================================== */
+    .final-cta {
+      background:
+        radial-gradient(600px 300px at 20% 20%, rgba(10, 119, 90, 0.4), transparent 60%),
+        linear-gradient(135deg, #0A775A 0%, #112F20 100%);
+      color: var(--color-white);
+      text-align: center;
+      border-radius: 32px;
+      margin: 0 16px;
+      padding: 64px 24px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .final-cta .bg-scene {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      z-index: 0;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .final-cta > * { position: relative; z-index: 1; }
+    .final-cta .float-leaf {
+      position: absolute;
+      z-index: 1;
+      opacity: 0.5;
+      pointer-events: none;
+      will-change: transform;
+    }
+    .final-cta .float-leaf.fl-1 { top: 12%; left: 8%; width: 48px; animation: float 9s ease-in-out infinite; }
+    .final-cta .float-leaf.fl-2 { bottom: 15%; right: 10%; width: 60px; animation: float 11s ease-in-out infinite -4s; }
+    .final-cta h2 { color: var(--color-white); font-size: clamp(24px, 5vw, 38px); max-width: 700px; margin-left: auto; margin-right: auto; }
+    .final-cta p { color: rgba(255,255,255,0.85); font-size: 16px; max-width: 620px; margin: 0 auto 32px; line-height: 1.6; }
+    .final-cta .btn { background: var(--color-white); color: var(--color-dark); }
+    .final-cta .btn:hover { background: var(--color-mint); color: var(--color-dark); }
+    .final-cta .btn .wa-icon { background: var(--color-primary); }
+
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
+    .site-footer {
+      background: var(--color-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 56px 0 32px;
+      margin-top: 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+    }
+    .footer-brand h3 { color: var(--color-white); font-size: 20px; margin-bottom: 6px; }
+    .footer-brand p { color: var(--color-mint); font-size: 13px; font-weight: 600; margin: 0; }
+    .footer-col h4 {
+      color: var(--color-white);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 16px;
+      font-weight: 700;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a {
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-col a:hover { color: var(--color-mint); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ==========================================================
+       FLOATING WA (mobile)
+       ========================================================== */
+    .wa-float {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 90;
+      background: var(--color-primary);
+      color: var(--color-white);
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 28px rgba(10, 119, 90, 0.45);
+      transition: transform .25s var(--ease), background .25s var(--ease);
+    }
+    .wa-float:hover { transform: scale(1.06); background: var(--color-primary-hover); color: var(--color-white); }
+    .wa-float svg { width: 32px; height: 32px; fill: var(--color-white); }
+
+    /* Accessible pulse (respects reduced motion) */
+    .wa-float::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--color-primary);
+      opacity: 0.4;
+      animation: pulse 2.4s var(--ease) infinite;
+      z-index: -1;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.4; }
+      70% { transform: scale(1.5); opacity: 0; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* ==========================================================
+       ANIMATIONS
+       ========================================================== */
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+    .js .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1; transform: none; }
+      .wa-float::before { display: none; }
+    }
+
+    /* ==========================================================
+       RESPONSIVE — TABLET (>=768px)
+       ========================================================== */
+    @media (min-width: 768px) {
+      section { padding: 88px 0; }
+      .container { padding: 0 32px; }
+
+      .hero { min-height: 88vh; }
+      .hero .container.hero-bottom { padding-bottom: 120px; padding-right: 32px; }
+      .hero-cta-row { flex-direction: row; align-items: center; }
+
+      .pain { padding: 72px 48px; margin: 0 24px; }
+
+      .about-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      #sobre { padding: 40px 0; }
+
+      .areas-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+      .why-grid { grid-template-columns: 1.3fr 1fr; gap: 56px; }
+
+      .steps-list { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+      .audience-inner { padding: 56px 48px; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; }
+      .audience-image { max-height: 480px; }
+
+      .final-cta { padding: 96px 48px; margin: 0 24px; }
+
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+    }
+
+    /* ==========================================================
+       RESPONSIVE — DESKTOP (>=1024px)
+       ========================================================== */
+    @media (min-width: 1024px) {
+      section { padding: var(--section-py-desktop) 0; }
+
+      .nav-desktop { display: block; }
+      .header-cta { display: inline-flex; }
+      .menu-toggle { display: none; }
+      .wa-float { display: none; }
+
+      .steps-list { grid-template-columns: repeat(5, 1fr); gap: 16px; }
+
+      .pain { margin: 0 auto; max-width: calc(var(--container) - 40px); }
+      .final-cta { margin: 0 auto; max-width: calc(var(--container) - 40px); }
+    }
+
+    /* Small phones */
+    @media (max-width: 380px) {
+      .hero { padding-top: 32px; }
+      .hero-visual { border-radius: 20px 60px 20px 60px; }
+      .pain, .final-cta { border-radius: 24px; margin: 0 12px; padding-left: 20px; padding-right: 20px; }
+    }
+
+    /* ==========================================================
+       CREDIBILITY BAR — trust bullets right after hero
+       ========================================================== */
+    .cred-bar {
+      background: var(--color-white);
+      border-top: 1px solid rgba(17, 47, 32, 0.06);
+      border-bottom: 1px solid rgba(17, 47, 32, 0.06);
+      padding: 22px 0;
+    }
+    .cred-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .cred-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-dark);
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.3;
+    }
+    .cred-list li svg {
+      flex-shrink: 0;
+      width: 22px; height: 22px;
+      color: var(--color-primary);
+    }
+    @media (min-width: 768px) {
+      .cred-list { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+      .cred-list li { justify-content: center; text-align: left; font-size: 15px; }
+    }
+
+    /* ==========================================================
+       SERVICES CARDS
+       ========================================================== */
+    .services { background: var(--color-white); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .service-card {
+      background: var(--color-paper);
+      border: 1px solid rgba(17, 47, 32, 0.06);
+      border-radius: var(--radius-card);
+      padding: 26px;
+      transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--color-primary);
+    }
+    .service-icon {
+      width: 48px; height: 48px;
+      background: var(--color-mint);
+      color: var(--color-primary);
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .service-card h3 { font-size: 18px; margin-bottom: 8px; }
+    .service-card p { font-size: 15px; margin: 0; line-height: 1.55; color: var(--color-text); }
+    @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+
+    /* ==========================================================
+       DIFERENCIAIS — feature bullets on paper
+       ========================================================== */
+    .differentiators {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 24px;
+      list-style: none;
+      padding: 0;
+    }
+    .differentiators li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      color: var(--color-dark);
+      font-weight: 600;
+      font-size: 15px;
+      background: var(--color-white);
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(17,47,32,0.06);
+    }
+    .differentiators .check {
+      flex-shrink: 0;
+      width: 24px; height: 24px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
+    @media (min-width: 768px) {
+      .differentiators { grid-template-columns: repeat(2, 1fr); gap: 12px 20px; }
+    }
+
+    /* ==========================================================
+       SEGMENTOS
+       ========================================================== */
+    .segments-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin-top: 24px;
+    }
+    .segments-grid li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--color-mint);
+      color: var(--color-dark);
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1.2;
+      word-break: break-word;
+      min-height: 48px;
+    }
+    .segments-grid li .em { font-size: 18px; line-height: 1; flex-shrink: 0; }
+    @media (min-width: 640px) { .segments-grid { grid-template-columns: repeat(3, 1fr); } .segments-grid li { font-size: 14px; } }
+    @media (min-width: 1024px) { .segments-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    /* ==========================================================
+       CASOS DE USO
+       ========================================================== */
+    .cases { background: var(--color-paper-alt); }
+    .cases-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .case-card {
+      background: var(--color-white);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      box-shadow: var(--shadow-soft);
+    }
+    .case-card h3 { font-size: 20px; margin-bottom: 12px; }
+    .case-card p { color: var(--color-text); margin: 0 0 12px; font-size: 15px; }
+    .case-result {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--color-primary);
+      font-weight: 700;
+      font-size: 15px;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(17, 47, 32, 0.06);
+    }
+    .case-result svg { flex-shrink: 0; width: 22px; height: 22px; margin-top: 1px; }
+    @media (min-width: 768px) { .cases-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
+
+    /* ==========================================================
+       DEPOIMENTOS
+       ========================================================== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .testimonial-card {
+      background: var(--color-white);
+      border: 1px solid rgba(17, 47, 32, 0.06);
+      border-radius: var(--radius-card);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: var(--shadow-soft);
+    }
+    .testimonial-card .stars {
+      color: #FFC344;
+      letter-spacing: 3px;
+      font-size: 15px;
+    }
+    .testimonial-card blockquote {
+      margin: 0;
+      color: var(--color-dark);
+      font-weight: 500;
+      line-height: 1.55;
+      font-size: 16px;
+    }
+    @media (min-width: 768px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+
+
+    /* ==========================================================
+       INOVALOGIX FOOTER STRIP
+       ========================================================== */
+    .credits {
+      background: #0A1F16;
+      color: rgba(255,255,255,0.72);
+      padding: 18px 0;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      position: relative;
+      z-index: 2;
+    }
+    .credits-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    .credits a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-mint);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: color .25s var(--ease), transform .25s var(--ease);
+    }
+    .credits a:hover { color: var(--color-white); transform: translateY(-1px); }
+    .credits img {
+      height: 40px;
+      width: auto;
+      opacity: 0.95;
+      transition: opacity .25s var(--ease);
+    }
+    .credits a:hover img { opacity: 1; }
+
+    /* ==========================================================
+       FOOTER BACKGROUND — real mossy scene photo
+       ========================================================== */
+    .site-footer { position: relative; isolation: isolate; overflow: hidden; }
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("efeito-final-clean.png");
+      background-size: cover;
+      background-position: center 40%;
+      background-repeat: no-repeat;
+      opacity: 0.6;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .site-footer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(17, 47, 32, 0.35) 0%, rgba(10, 31, 22, 0.7) 55%, rgba(10, 31, 22, 0.9) 100%);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .site-footer > * { position: relative; z-index: 2; }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#topo" class="logo" aria-label="Jaqueline Santinho — Consultoria Ambiental, ir para o topo">
+        Jaqueline Santinho
+        <span>Consultoria Ambiental</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#como-funciona">Processo</a></li>
+          <li><a href="#casos">Casos</a></li>
+          <li><a href="#faq">Dúvidas</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-primary btn-header header-cta" href="https://wa.me/5511960764543" target="_blank" rel="noopener" aria-label="Falar no WhatsApp com Jaqueline Santinho">
+        <svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C12.831-3.984.106 1.407.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.723 1.457h.005c9.881 0 12.741-10.281 6.457-20.356zm-8.457 18.301h-.003a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.75.983 1.001-3.643-.235-.375a9.861 9.861 0 01-1.51-5.26c.001-8.766 10.699-13.148 16.883-6.966 6.183 6.184 1.805 16.884-6.994 16.884z"/></svg>
+        Falar no WhatsApp
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-controls="navMobile" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Nav mobile -->
+  <div class="nav-mobile" id="navMobile" data-open="false" aria-hidden="true">
+    <div class="nav-mobile-header">
+      <div class="logo">Jaqueline Santinho<span>Consultoria Ambiental</span></div>
+      <button class="nav-mobile-close" id="navMobileClose" aria-label="Fechar menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M6 18L18 6"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Navegação mobile">
+      <ul>
+        <li><a href="#sobre" data-nav-link>Sobre</a></li>
+        <li><a href="#servicos" data-nav-link>Serviços</a></li>
+        <li><a href="#como-funciona" data-nav-link>Processo</a></li>
+        <li><a href="#casos" data-nav-link>Casos</a></li>
+        <li><a href="#faq" data-nav-link>Dúvidas</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/5511960764543" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <svg class="wa-icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C12.831-3.984.106 1.407.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.723 1.457h.005c9.881 0 12.741-10.281 6.457-20.356zm-8.457 18.301h-.003a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.75.983 1.001-3.643-.235-.375a9.861 9.861 0 01-1.51-5.26c.001-8.766 10.699-13.148 16.883-6.966 6.183 6.184 1.805 16.884-6.994 16.884z"/></svg>
+      Falar no WhatsApp
+    </a>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+    <section class="hero" id="topo" aria-labelledby="heroTitle">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="" aria-hidden="true">
+        <source src="videojaqueline.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-top">
+        <span class="kicker reveal">Jaqueline Santinho · Engenheira Química</span>
+      </div>
+
+      <div class="container hero-bottom">
+        <div class="hero-content reveal">
+          <h1 id="heroTitle">
+            <span class="h1-full">Licenciamento Ambiental sem burocracia para sua empresa continuar operando com segurança.</span>
+            <span class="h1-short">Licenciamento Ambiental sem burocracia.</span>
+          </h1>
+          <p class="subhead">
+            <span class="sub-full">Regularizamos sua empresa junto à CETESB, IBAMA, DAEE e demais órgãos ambientais, conduzindo todo o processo técnico para que você tenha tranquilidade, evite multas e mantenha sua operação em conformidade com a legislação.</span>
+            <span class="sub-short">Regularizamos sua empresa junto à CETESB, IBAMA, DAEE e demais órgãos ambientais.</span>
+          </p>
+          <div class="hero-cta-row">
+            <a class="btn btn-primary" href="https://wa.me/5511960764543?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20diagn%C3%B3stico%20gratuito." target="_blank" rel="noopener" aria-label="Solicitar diagnóstico gratuito no WhatsApp">
+              <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C12.831-3.984.106 1.407.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.723 1.457h.005c9.881 0 12.741-10.281 6.457-20.356zm-8.457 18.301h-.003a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.75.983 1.001-3.643-.235-.375a9.861 9.861 0 01-1.51-5.26c.001-8.766 10.699-13.148 16.883-6.966 6.183 6.184 1.805 16.884-6.994 16.884z"/></svg>
+              Solicitar Diagnóstico Gratuito
+            </a>
+            <a class="btn btn-outline" href="https://wa.me/5511960764543" target="_blank" rel="noopener">Falar com um Especialista</a>
+          </div>
+          <p class="hero-trust"><span class="stars" aria-label="5 estrelas">★★★★★</span> Empresas de diversos segmentos já confiam em nossa consultoria ambiental.</p>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#sobre" aria-label="Role para baixo para descobrir">
+        Role para baixo para descobrir
+        <span class="chevron" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </span>
+      </a>
+    </section>
+
+    <!-- =========================================================
+         CREDIBILITY BAR — trust bullets
+         ========================================================= -->
+    <aside class="cred-bar" aria-label="Diferenciais rápidos">
+      <div class="container">
+        <ul class="cred-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+            Atendimento em todo o Estado de São Paulo
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+            Equipe Técnica Especializada
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+            Acompanhamento até a Emissão
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+            Atendimento Ágil pelo WhatsApp
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- =========================================================
+         MARQUEE — órgãos parceiros
+         ========================================================= -->
+    <aside class="marquee" aria-label="Órgãos com os quais eu trabalho">
+      <div class="marquee-track" aria-hidden="true">
+        <ul class="marquee-list">
+          <li class="marquee-item"><img src="POL%C3%8DCIA%20CIVIL.png" alt="" loading="lazy" /><span>Polícia Civil</span></li>
+          <li class="marquee-item"><img src="exercito-brasileiro.gif" alt="" loading="lazy" /><span>Exército Brasileiro</span></li>
+          <li class="marquee-item"><img src="Pol%C3%ADcia_Federal_do_Brasil.png" alt="" loading="lazy" /><span>Polícia Federal</span></li>
+          <li class="marquee-item"><img src="CETESB.png" alt="" loading="lazy" /><span>CETESB</span></li>
+          <li class="marquee-item">
+            <span class="marquee-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6M3 21h18"/></svg></span>
+            <span>Prefeituras</span>
+          </li>
+          <li class="marquee-item"><img src="IBAMA.svg" alt="" loading="lazy" /><span>IBAMA</span></li>
+        </ul>
+        <ul class="marquee-list" aria-hidden="true">
+          <li class="marquee-item"><img src="POL%C3%8DCIA%20CIVIL.png" alt="" loading="lazy" /><span>Polícia Civil</span></li>
+          <li class="marquee-item"><img src="exercito-brasileiro.gif" alt="" loading="lazy" /><span>Exército Brasileiro</span></li>
+          <li class="marquee-item"><img src="Pol%C3%ADcia_Federal_do_Brasil.png" alt="" loading="lazy" /><span>Polícia Federal</span></li>
+          <li class="marquee-item"><img src="CETESB.png" alt="" loading="lazy" /><span>CETESB</span></li>
+          <li class="marquee-item">
+            <span class="marquee-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6M3 21h18"/></svg></span>
+            <span>Prefeituras</span>
+          </li>
+          <li class="marquee-item"><img src="IBAMA.svg" alt="" loading="lazy" /><span>IBAMA</span></li>
+        </ul>
+      </div>
+      <p class="marquee-sr" aria-live="off">Órgãos com os quais eu trabalho: Polícia Civil, Exército Brasileiro, Polícia Federal, CETESB, Prefeituras e IBAMA.</p>
+    </aside>
+
+    <!-- =========================================================
+         O PROBLEMA + SOBRE (combined, video spans both texts)
+         ========================================================= -->
+    <section id="sobre" aria-labelledby="aboutTitle">
+      <div class="container about-grid">
+        <div class="about-text reveal">
+          <span class="kicker">O Problema</span>
+          <h2 id="problemTitle">Sua empresa precisa de licença ambiental?</h2>
+          <p>Muitos empresários descobrem a necessidade do licenciamento apenas durante uma fiscalização, renovação de contrato ou solicitação de órgãos públicos. Isso pode resultar em multas, embargos e atrasos que comprometem a operação.</p>
+          <p style="margin-top: 10px;">Nossa equipe identifica exatamente quais licenças sua empresa precisa e conduz todo o processo com segurança e transparência.</p>
+
+          <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(17,47,32,0.1);">
+            <span class="kicker">Sobre</span>
+            <h2 id="aboutTitle" style="font-size: clamp(20px, 3.5vw, 26px);">Quem cuida do seu processo</h2>
+            <p>Sou a Jaqueline, engenheira química. É comigo que você fala, do primeiro contato até a licença sair. Quem assina o processo é quem te atende, não uma central de suporte.</p>
+          </div>
+        </div>
+        <figure class="about-portrait reveal" aria-label="Retrato de Jaqueline Santinho">
+          <img src="jaqueline-jaquetasf.png" alt="Jaqueline Santinho, engenheira química, vestindo jaqueta" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         AREAS
+         ========================================================= -->
+    <section class="areas" id="areas" aria-labelledby="areasTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Áreas de Atuação</span>
+          <h2 id="areasTitle">Órgãos com os quais eu trabalho</h2>
+          <p>Licenciamento e acompanhamento junto aos principais órgãos de controle e fiscalização.</p>
+        </div>
+
+        <ul class="areas-grid">
+          <li class="area-card reveal">
+            <div class="area-icon">
+              <img src="POL%C3%8DCIA%20CIVIL.png" alt="Brasão da Polícia Civil" loading="lazy" width="56" height="56" />
+            </div>
+            <h3>Polícia Civil</h3>
+            <p>Cuido do licenciamento de produtos e atividades controladas na esfera estadual.</p>
+          </li>
+
+          <li class="area-card reveal">
+            <div class="area-icon">
+              <img src="exercito-brasileiro.gif" alt="Brasão do Exército Brasileiro" loading="lazy" width="56" height="56" />
+            </div>
+            <h3>Exército Brasileiro</h3>
+            <p>Acompanho o processo de licença para produtos controlados sob fiscalização militar.</p>
+          </li>
+
+          <li class="area-card reveal">
+            <div class="area-icon">
+              <img src="Pol%C3%ADcia_Federal_do_Brasil.png" alt="Brasão da Polícia Federal" loading="lazy" width="56" height="56" />
+            </div>
+            <h3>Polícia Federal</h3>
+            <p>Trato do licenciamento de produtos químicos controlados.</p>
+          </li>
+
+          <li class="area-card reveal">
+            <div class="area-icon">
+              <img src="CETESB.png" alt="Logotipo da CETESB" loading="lazy" width="56" height="56" />
+            </div>
+            <h3>CETESB</h3>
+            <p>Conduzo o licenciamento ambiental estadual.</p>
+          </li>
+
+          <li class="area-card reveal">
+            <div class="area-icon" aria-hidden="true">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12M9 21v-6h6v6M3 21h18"/></svg>
+            </div>
+            <h3>Prefeituras</h3>
+            <p>Resolvo alvarás e licenças ambientais no âmbito municipal.</p>
+          </li>
+
+          <li class="area-card reveal">
+            <div class="area-icon brasao-bg-dark">
+              <img src="IBAMA.svg" alt="Brasão do IBAMA" loading="lazy" width="56" height="56" />
+            </div>
+            <h3>IBAMA</h3>
+            <p>Cuido do licenciamento ambiental federal.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SERVIÇOS
+         ========================================================= -->
+    <section class="services" id="servicos" aria-labelledby="servicesTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Serviços</span>
+          <h2 id="servicesTitle">Soluções Ambientais para Cada Etapa do seu Negócio</h2>
+        </div>
+        <ul class="services-grid" style="list-style: none;">
+          <li class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+            </div>
+            <h3>Responsabilidade Técnica</h3>
+            <p>Emissão de ART e RRT para projetos e processos ambientais que exigem assinatura de responsável técnico habilitado.</p>
+          </li>
+          <li class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg>
+            </div>
+            <h3>Licenciamento Ambiental</h3>
+            <p>Obtenha ou renove suas licenças com acompanhamento completo junto aos órgãos competentes.</p>
+          </li>
+          <li class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </div>
+            <h3>CADRI</h3>
+            <p>Gerenciamento documental para destinação correta de resíduos industriais.</p>
+          </li>
+          <li class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l3 -3h12l3 3M3 6v14a2 2 0 002 2h14a2 2 0 002-2V6M8 10h8"/></svg>
+            </div>
+            <h3>PGRS</h3>
+            <p>Plano de Gerenciamento de Resíduos Sólidos elaborado conforme a legislação vigente.</p>
+          </li>
+          <li class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9.5 12.5l1.5 1.5 3.5-3.5"/><path d="M12 7v2"/></svg>
+            </div>
+            <h3>AVCB — Corpo de Bombeiros</h3>
+            <p>Obtenção e renovação do Auto de Vistoria do Corpo de Bombeiros para sua empresa operar com segurança.</p>
+          </li>
+          <li class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <h3>Regularização Ambiental</h3>
+            <p>Adequação da empresa às exigências legais para evitar sanções e paralisações.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         WHY
+         ========================================================= -->
+    <section id="por-que" aria-labelledby="whyTitle">
+      <div class="container why-grid">
+        <div class="why-text reveal">
+          <span class="kicker">Diferenciais</span>
+          <h2 id="whyTitle">Por que empresas escolhem nossa consultoria?</h2>
+          <p>Trabalhamos com atendimento direto, técnica atualizada e transparência em cada etapa — do primeiro contato até a licença sair no nome da sua empresa.</p>
+
+          <ul class="differentiators" aria-label="Diferenciais do atendimento">
+            <li><span class="check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </span>Atendimento personalizado</li>
+            <li><span class="check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </span>Equipe técnica especializada</li>
+            <li><span class="check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </span>Comunicação clara durante todo o processo</li>
+            <li><span class="check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </span>Agilidade na condução dos processos</li>
+            <li><span class="check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </span>Conhecimento atualizado da legislação</li>
+            <li><span class="check" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            </span>Suporte antes, durante e após a emissão</li>
+          </ul>
+        </div>
+
+        <aside class="why-highlight reveal" aria-label="Destaque">
+          <div class="metric">1 → 1</div>
+          <p>Do primeiro contato até a licença: é comigo que você fala. Sem repasse, sem fila, sem intermediário.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         STEPS
+         ========================================================= -->
+    <section class="steps" id="como-funciona" aria-labelledby="stepsTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker" style="background: rgba(206,228,222,0.15); color: var(--color-mint);">Processo</span>
+          <h2 id="stepsTitle">Um Processo Simples e Transparente</h2>
+        </div>
+        <ol class="steps-list">
+          <li class="step reveal"><h3 style="color: var(--color-white); font-size: 16px; margin-bottom: 8px;">Diagnóstico</h3><p>Analisamos a situação ambiental da sua empresa.</p></li>
+          <li class="step reveal"><h3 style="color: var(--color-white); font-size: 16px; margin-bottom: 8px;">Levantamento</h3><p>Solicitamos apenas os documentos necessários.</p></li>
+          <li class="step reveal"><h3 style="color: var(--color-white); font-size: 16px; margin-bottom: 8px;">Protocolo</h3><p>Protocolamos toda a documentação junto ao órgão competente.</p></li>
+          <li class="step reveal"><h3 style="color: var(--color-white); font-size: 16px; margin-bottom: 8px;">Acompanhamento</h3><p>Monitoramos o processo e respondemos às exigências técnicas.</p></li>
+          <li class="step reveal"><h3 style="color: var(--color-white); font-size: 16px; margin-bottom: 8px;">Licença Emitida</h3><p>Você recebe toda a documentação pronta para operar com segurança.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         AUDIENCE
+         ========================================================= -->
+    <section class="audience" id="para-quem" aria-labelledby="audienceTitle">
+      <div class="container">
+        <div class="audience-inner reveal">
+          <div class="audience-text">
+            <span class="kicker">Segmentos</span>
+            <h2 id="audienceTitle">Atendemos empresas de diversos segmentos</h2>
+            <p>De indústrias a comércios, atendemos toda operação que depende de licença ambiental para funcionar, renovar ou regularizar uma autorização.</p>
+            <ul class="segments-grid" aria-label="Segmentos atendidos">
+              <li><span class="em" aria-hidden="true">🏭</span> Indústrias</li>
+              <li><span class="em" aria-hidden="true">🚛</span> Transportadoras</li>
+              <li><span class="em" aria-hidden="true">🏢</span> Galpões Logísticos</li>
+              <li><span class="em" aria-hidden="true">🏗</span> Construção Civil</li>
+              <li><span class="em" aria-hidden="true">⛽</span> Postos de Combustíveis</li>
+              <li><span class="em" aria-hidden="true">🏪</span> Comércios</li>
+              <li><span class="em" aria-hidden="true">🏥</span> Clínicas</li>
+              <li><span class="em" aria-hidden="true">🏘</span> Condomínios</li>
+              <li><span class="em" aria-hidden="true">📦</span> Centros de Distribuição</li>
+            </ul>
+          </div>
+          <figure class="audience-image" data-scroll-zoom>
+            <img src="jaqueline-socialcorpointeiro.png" alt="Jaqueline Santinho, engenheira química, em campo próximo a uma cachoeira" loading="lazy" decoding="async" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ESTUDOS DE CASO
+         ========================================================= -->
+    <section class="cases" id="casos" aria-labelledby="casesTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Estudos de Caso</span>
+          <h2 id="casesTitle">Resultados que Geram Confiança</h2>
+        </div>
+        <div class="cases-grid">
+          <article class="case-card reveal">
+            <h3>Regularização Industrial</h3>
+            <p>Empresa precisava ampliar suas operações e não possuía as licenças necessárias.</p>
+            <p>Nossa equipe conduziu todo o processo técnico junto aos órgãos ambientais.</p>
+            <div class="case-result">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+              Empresa regularizada para continuar operando.
+            </div>
+          </article>
+          <article class="case-card reveal">
+            <h3>Renovação de Licença</h3>
+            <p>Cliente corria risco de perder a validade da Licença de Operação.</p>
+            <p>Realizamos todo o acompanhamento documental.</p>
+            <div class="case-result">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>
+              Licença renovada dentro do prazo.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         DEPOIMENTOS
+         ========================================================= -->
+    <section aria-labelledby="testimonialsTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Depoimentos</span>
+          <h2 id="testimonialsTitle">O que dizem quem já foi atendido</h2>
+        </div>
+        <div class="testimonials-grid">
+          <figure class="testimonial-card reveal">
+            <span class="stars" aria-label="5 estrelas">★★★★★</span>
+            <blockquote>"A equipe conduziu todo o processo com transparência e rapidez."</blockquote>
+          </figure>
+          <figure class="testimonial-card reveal">
+            <span class="stars" aria-label="5 estrelas">★★★★★</span>
+            <blockquote>"Resolveram um problema que estávamos tentando há meses."</blockquote>
+          </figure>
+          <figure class="testimonial-card reveal">
+            <span class="stars" aria-label="5 estrelas">★★★★★</span>
+            <blockquote>"Excelente atendimento do início ao fim."</blockquote>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FAQ
+         ========================================================= -->
+    <section id="faq" aria-labelledby="faqTitle">
+      <div class="container">
+        <div class="section-head reveal" style="text-align: center; margin-left: auto; margin-right: auto;">
+          <span class="kicker">FAQ</span>
+          <h2 id="faqTitle">Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Minha empresa precisa de licença ambiental?</summary>
+            <div class="faq-body">Depende da atividade exercida. Fazemos uma análise inicial para identificar exatamente quais licenças são necessárias.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Quanto tempo demora?</summary>
+            <div class="faq-body">O prazo varia conforme o tipo de atividade e o órgão responsável, mas acompanhamos todas as etapas até a emissão.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Posso operar sem licença?</summary>
+            <div class="faq-body">Dependendo da atividade, não. A ausência do licenciamento pode resultar em multas, embargos e outras penalidades.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Vocês atendem minha cidade?</summary>
+            <div class="faq-body">Sim. Atendemos empresas em todo o Estado de São Paulo.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Quanto custa?</summary>
+            <div class="faq-body">Cada processo possui características próprias. Após a análise inicial apresentamos uma proposta personalizada.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SCROLL VIDEO — "Empresa parada" scrubbing bridge to CTA
+         ========================================================= -->
+    <section class="scroll-video-section" aria-label="Jaqueline Santinho, consultora ambiental">
+      <div class="video-wrap">
+        <img src="jaqueline-socialcintura.png" alt="Jaqueline Santinho, engenheira química e consultora ambiental" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        <div class="video-overlay" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FINAL CTA
+         ========================================================= -->
+    <section aria-labelledby="finalCtaTitle" style="padding: 32px 0 64px;">
+      <div class="container">
+        <div class="final-cta reveal">
+          <svg class="bg-scene" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="ctaMt" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#CEE4DE" stop-opacity="0.2"/>
+                <stop offset="100%" stop-color="#CEE4DE" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            <path d="M0 260 L120 190 L260 240 L400 170 L560 230 L720 180 L880 240 L1040 190 L1200 220 L1200 400 L0 400 Z" fill="url(#ctaMt)"/>
+            <g fill="#CEE4DE" opacity="0.18">
+              <path d="M60 340 L74 300 L88 340 Z"/>
+              <path d="M100 345 L116 295 L132 345 Z"/>
+              <path d="M960 340 L976 300 L992 340 Z"/>
+              <path d="M1000 345 L1016 295 L1032 345 Z"/>
+              <path d="M1080 340 L1094 300 L1108 340 Z"/>
+            </g>
+          </svg>
+
+          <svg class="float-leaf fl-1" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 C 8 8, 4 20, 8 32 C 20 36, 32 28, 36 16 C 32 8, 26 4, 20 4 Z M12 28 L28 12" stroke="#CEE4DE" stroke-width="1.5" fill="rgba(206, 228, 222, 0.2)"/></svg>
+          <svg class="float-leaf fl-2" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 4 C 8 8, 4 20, 8 32 C 20 36, 32 28, 36 16 C 32 8, 26 4, 20 4 Z M12 28 L28 12" stroke="#CEE4DE" stroke-width="1.5" fill="rgba(206, 228, 222, 0.15)"/></svg>
+
+          <h2 id="finalCtaTitle">Descubra em poucos minutos quais licenças sua empresa realmente precisa</h2>
+          <p>Nossa equipe fará uma análise inicial da sua operação e orientará o melhor caminho para regularizar sua empresa.</p>
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;">
+            <a class="btn" href="https://wa.me/5511960764543?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20diagn%C3%B3stico." target="_blank" rel="noopener" aria-label="Solicitar diagnóstico gratuito">
+              <svg class="wa-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C12.831-3.984.106 1.407.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.723 1.457h.005c9.881 0 12.741-10.281 6.457-20.356zm-8.457 18.301h-.003a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.75.983 1.001-3.643-.235-.375a9.861 9.861 0 01-1.51-5.26c.001-8.766 10.699-13.148 16.883-6.966 6.183 6.184 1.805 16.884-6.994 16.884z"/></svg>
+              Solicitar Diagnóstico
+            </a>
+            <a class="btn btn-outline" href="https://wa.me/5511960764543" target="_blank" rel="noopener" style="color: var(--color-dark); border-color: rgba(17,47,32,0.35);">Falar no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Jaqueline Santinho — Engenheira Química</h3>
+          <p>Consultoria em Licenciamento Ambiental</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="https://wa.me/5511960764543" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C12.831-3.984.106 1.407.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.723 1.457c9.881 0 12.741-10.281 6.457-20.356zm-8.457 18.301a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.75.983 1.001-3.643-.235-.375a9.861 9.861 0 01-1.51-5.26c.001-8.766 10.699-13.148 16.883-6.966 6.183 6.184 1.805 16.884-6.994 16.884z"/></svg>
+              WhatsApp: (11) 96076-4543</a></li>
+            <li><a href="mailto:" aria-label="E-mail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              E-mail: [inserir e-mail]</a></li>
+            <li><a href="#" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              Instagram: [inserir @]</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento</h4>
+          <ul>
+            <li style="color: rgba(255,255,255,0.75); font-size: 14px;">Região: São Paulo / Brasil</li>
+            <li><a href="#areas">Áreas de atuação</a></li>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#faq">Dúvidas</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Jaqueline Santinho. Todos os direitos reservados.</span>
+        <span>Consultoria em Licenciamento Ambiental</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- InovaLogix credits -->
+  <div class="credits" role="contentinfo">
+    <div class="container credits-inner">
+      <span>Site desenvolvido por</span>
+      <a href="https://inovalogix.com.br/criacao-de-sites/" target="_blank" rel="noopener" aria-label="InovaLogix — Criação de Sites">
+        <img src="inovalogix-logo.png" alt="InovaLogix" loading="lazy" />
+      </a>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp (mobile only) -->
+  <a class="wa-float" href="https://wa.me/5511960764543" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.449C12.831-3.984.106 1.407.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.723 1.457c9.881 0 12.741-10.281 6.457-20.356zm-8.457 18.301a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.75.983 1.001-3.643-.235-.375a9.861 9.861 0 01-1.51-5.26c.001-8.766 10.699-13.148 16.883-6.966 6.183 6.184 1.805 16.884-6.994 16.884z"/><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+  </a>
+
+  <script>
+    // ============================================================
+    // Mobile nav
+    // ============================================================
+    (function () {
+      const toggle = document.getElementById('menuToggle');
+      const nav = document.getElementById('navMobile');
+      const closeBtn = document.getElementById('navMobileClose');
+      const links = document.querySelectorAll('[data-nav-link]');
+
+      function open() {
+        nav.dataset.open = 'true';
+        nav.setAttribute('aria-hidden', 'false');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        nav.dataset.open = 'false';
+        nav.setAttribute('aria-hidden', 'true');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+      toggle.addEventListener('click', open);
+      closeBtn.addEventListener('click', close);
+      links.forEach(l => l.addEventListener('click', close));
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.dataset.open === 'true') close();
+      });
+    })();
+
+    // ============================================================
+    // Scroll reveal (with subtle stagger per parent)
+    // ============================================================
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      // Stagger delay for siblings within the same parent group
+      const groups = new Map();
+      els.forEach(el => {
+        const parent = el.parentElement;
+        if (!groups.has(parent)) groups.set(parent, 0);
+        const i = groups.get(parent);
+        el.style.transitionDelay = (i * 80) + 'ms';
+        groups.set(parent, i + 1);
+      });
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      els.forEach(el => io.observe(el));
+    })();
+
+    // ============================================================
+    // Hero parallax (subtle, disabled on reduced motion)
+    // ============================================================
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const target = document.querySelector('[data-parallax]');
+      if (!target) return;
+
+      let ticking = false;
+      const update = () => {
+        const y = window.scrollY;
+        if (y < 800) {
+          target.style.transform = 'translateY(' + (y * 0.06) + 'px)';
+        }
+        ticking = false;
+      };
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      }, { passive: true });
+    })();
+
+    // ============================================================
+    // VIDEO ANIMATIONS
+    // Desktop (fine pointer): scrubbing driven by scroll (rAF + lerp)
+    // Mobile / touch: autoplay + loop (scrubbing is unreliable on iOS)
+    // ============================================================
+    (function () {
+      const targets = document.querySelectorAll('[data-scroll-video]');
+      if (!targets.length) return;
+
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isTouch = window.matchMedia('(pointer: coarse)').matches
+                   || 'ontouchstart' in window
+                   || navigator.maxTouchPoints > 0;
+      const ease = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+      targets.forEach(el => {
+        const video = el.querySelector('video');
+        if (!video) return;
+
+        // Common attrs required to play inline muted on mobile
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.setAttribute('muted', '');
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
+        video.controls = false;
+
+        // ---------- Touch / mobile: normal looping playback ----------
+        if (isTouch) {
+          video.autoplay = true;
+          video.loop = true;
+          video.setAttribute('autoplay', '');
+          video.setAttribute('loop', '');
+          const kick = () => {
+            const p = video.play();
+            if (p && p.catch) p.catch(() => {});
+          };
+          if (video.readyState >= 2) kick();
+          else video.addEventListener('loadeddata', kick, { once: true });
+          // Retry on first interaction if autoplay was blocked
+          const retryOnGesture = () => { kick(); };
+          document.addEventListener('touchstart', retryOnGesture, { once: true, passive: true });
+          document.addEventListener('click', retryOnGesture, { once: true, passive: true });
+          document.addEventListener('scroll', retryOnGesture, { once: true, passive: true });
+          video.load();
+          return;
+        }
+
+        // ---------- Desktop: scroll-driven scrubbing ----------
+        if (reduce) {
+          video.autoplay = false;
+          try { video.currentTime = 0; video.pause(); } catch (e) {}
+          return;
+        }
+
+        video.autoplay = false;
+        video.loop = false;
+
+        let target = 0;
+        let current = 0;
+        let rafId = null;
+        let ready = false;
+
+        const computeTarget = () => {
+          const vh = window.innerHeight;
+          const rect = el.getBoundingClientRect();
+          const center = rect.top + rect.height / 2;
+          const start = vh * 0.95;
+          const end   = vh * 0.05;
+          const raw = (start - center) / (start - end);
+          const p = ease(Math.min(1, Math.max(0, raw)));
+          target = p * (video.duration || 0);
+        };
+
+        const tick = () => {
+          computeTarget();
+          current += (target - current) * 0.12;
+          try {
+            if (!isNaN(video.duration)) video.currentTime = current;
+          } catch (e) {}
+          rafId = requestAnimationFrame(tick);
+        };
+
+        const onReady = () => {
+          if (ready) return;
+          if (isNaN(video.duration) || video.duration === 0) return;
+          ready = true;
+          try { video.currentTime = 0; } catch (e) {}
+          if (rafId == null) rafId = requestAnimationFrame(tick);
+        };
+
+        video.addEventListener('loadedmetadata', onReady);
+        video.addEventListener('loadeddata', onReady);
+        video.addEventListener('canplay', onReady);
+        if (video.readyState >= 1) onReady();
+
+        video.addEventListener('play', () => {
+          if (ready) setTimeout(() => video.pause(), 30);
+        });
+
+        video.load();
+      });
+    })();
+
+    // ============================================================
+    // Scroll-tied zoom (Ken Burns) for the audience image
+    // Same trigger window as data-scroll-pose so both animations feel unified.
+    // ============================================================
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const targets = document.querySelectorAll('[data-scroll-zoom]');
+      if (!targets.length) return;
+
+      const ease = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+
+      let ticking = false;
+      const update = () => {
+        const vh = window.innerHeight;
+        targets.forEach(el => {
+          const section = el.closest('section') || el;
+          const rect = section.getBoundingClientRect();
+          const center = rect.top + rect.height / 2;
+          const start = vh * 0.9;
+          const end   = vh * 0.1;
+          const raw = (start - center) / (start - end);
+          const p = ease(Math.min(1, Math.max(0, raw)));
+          // Zoom curve: subtle at edges, peaks around center of visibility
+          const scale = 1 + p * 0.18;
+          const img = el.querySelector('img');
+          if (img) img.style.transform = 'scale(' + scale.toFixed(4) + ')';
+        });
+        ticking = false;
+      };
+      const onScroll = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      update();
+    })();
+
+    // ============================================================
+    // Header shadow on scroll
+    // ============================================================
+    (function () {
+      const header = document.querySelector('.site-header');
+      if (!header) return;
+      const onScroll = () => {
+        if (window.scrollY > 8) header.classList.add('is-scrolled');
+        else header.classList.remove('is-scrolled');
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // ============================================================
+    // Footer year
+    // ============================================================
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

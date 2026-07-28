@@ -1,0 +1,131 @@
+# Landing Page — Jaqueline Santinho | Consultoria em Licenciamento Ambiental
+
+Texto por seção, pronto pra virar HTML na próxima etapa. Reescrevi em primeira pessoa, como se fosse a própria Jaqueline falando — funciona melhor pra um site pessoal do que o tom "empresa" das referências.
+
+**Antes de desenvolver, preencher:**
+- Número de WhatsApp (com DDD, formato para link `https://wa.me/55...`)
+- Cidade/estado ou raio de atendimento
+- Registro profissional, se ela quiser exibir (CREA)
+- Confirmar a descrição do que ela faz em cada órgão (deixei genérico e correto, mas ela pode ter uma atuação mais específica em cada um)
+
+---
+
+## 1. Cabeçalho (nav)
+
+Logo/nome: **Jaqueline Santinho** — Engenharia Ambiental
+
+Menu: Sobre · Áreas de Atuação · Como Funciona · Dúvidas
+
+Botão fixo no canto: **Falar no WhatsApp**
+
+---
+
+## 2. Hero (topo da página)
+
+Kicker: `Jaqueline Santinho · Engenheira Química`
+
+**H1:** Cuido da licença ambiental da sua empresa pra você não precisar aprender isso sozinho
+
+**Subheadline:** Sou engenheira química e resolvo o processo junto à Polícia Civil, Exército, Polícia Federal, CETESB, Prefeitura e IBAMA. Você me manda a atividade da empresa, eu digo o que falta e cuido do resto.
+
+**Botão CTA:** Chamar a Jaqueline no WhatsApp
+
+*(Se quiser testar outra linha: "Sua empresa está com todas as licenças ambientais em dia?" — pergunta direta, funciona bem pra quem chegou via anúncio.)*
+
+---
+
+## 3. A dor (seção de identificação)
+
+**H2:** Cada órgão tem a própria lista de exigência
+
+Você já tentou entender sozinho o que a CETESB pede? Ou o que muda quando o processo passa pela Polícia Federal? Cada órgão cobra um documento diferente, tem o próprio prazo e rejeita processo por causa de detalhe que ninguém avisou antes. Enquanto isso sua empresa fica exposta a multa, embargo ou parada de operação.
+
+---
+
+## 4. Sobre a Jaqueline
+
+**H2:** Quem cuida do seu processo
+
+Sou a Jaqueline, engenheira química. É comigo que você fala, do primeiro contato até a licença sair. Quem assina o processo é quem te atende, não uma central de suporte.
+
+---
+
+## 5. Áreas de atuação
+
+**H2:** Órgãos com os quais eu trabalho
+
+**Subtítulo:** Licenciamento e acompanhamento junto aos principais órgãos de controle e fiscalização.
+
+- **Polícia Civil** — Cuido do licenciamento de produtos e atividades controladas na esfera estadual.
+- **Exército Brasileiro** — Acompanho o processo de licença para produtos controlados sob fiscalização militar.
+- **Polícia Federal** — Trato do licenciamento de produtos químicos controlados.
+- **CETESB** — Conduzo o licenciamento ambiental estadual.
+- **Prefeituras** — Resolvo alvarás e licenças ambientais no âmbito municipal.
+- **IBAMA** — Cuido do licenciamento ambiental federal.
+
+*(Ajustar com a Jaqueline se ela tiver uma atuação mais específica em algum desses órgãos.)*
+
+---
+
+## 6. Por que trabalhar comigo
+
+**H2:** Um processo, uma responsável
+
+Você fala comigo, não com um atendente terceirizado, e não fica esperando dias por resposta. Prazo, documento e valor eu explico já na primeira conversa. Acompanho o processo inteiro, do diagnóstico até a licença sair, inclusive pra empresa pequena e média que não cabe no pacote padrão das assessorias grandes.
+
+---
+
+## 7. Como funciona
+
+**H2:** Como funciona
+
+1. Você me manda uma mensagem contando o que sua empresa faz.
+2. Eu digo quais licenças se aplicam e o que falta pra dar entrada.
+3. Você me passa a documentação, eu organizo e protocolo.
+4. Acompanho o processo até a licença sair no seu nome.
+
+---
+
+## 8. Para quem é
+
+**H2:** Pra quem é essa consultoria
+
+Atendo empresa que trabalha com produto controlado, indústria, comércio e prestador de serviço que depende de licença ambiental pra operar, renovar ou regularizar uma autorização.
+
+---
+
+## 9. Perguntas frequentes
+
+**Minha empresa precisa mesmo de licença ambiental?**
+Se você trabalha com produto controlado, gera resíduo, faz emissão ou ocupa área protegida, provavelmente sim. Me manda uma mensagem contando o que sua empresa faz que eu te digo com certeza.
+
+**Quanto tempo demora o processo?**
+Varia com o órgão e com a complexidade do seu caso. Já na primeira conversa dá pra te passar um prazo realista.
+
+**Eu preciso ir pessoalmente nos órgãos?**
+Raramente. Eu cuido do processo, dos documentos e do protocolo. Você só aparece quando a lei exige presença.
+
+**Você atende minha região?**
+Depende. Me chama no WhatsApp e a gente confirma rapidinho.
+
+---
+
+## 10. CTA final
+
+**H2:** Sua empresa parada por causa de licença sai caro
+
+Seja em multa ou em oportunidade perdida, deixar isso pra depois custa mais do que resolver agora. Me chama no WhatsApp e vamos ver o que falta pra você ficar em dia.
+
+**Botão CTA:** Chamar no WhatsApp agora
+
+---
+
+## 11. Rodapé
+
+Jaqueline Santinho — Engenheira Química
+Consultoria em Licenciamento Ambiental
+
+WhatsApp: [inserir número]
+E-mail: [inserir e-mail]
+Instagram: [inserir @, se houver]
+Cidade/Região: [inserir]
