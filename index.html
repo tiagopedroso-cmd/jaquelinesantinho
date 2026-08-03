@@ -585,20 +585,22 @@
     .about-text p { font-size: 16px; line-height: 1.65; }
     .about-portrait {
       width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      display: block;
+      border-radius: 16px;
+      overflow: hidden;
+      min-height: 320px;
     }
     .about-portrait img {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
-      border-radius: 16px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 0;
     }
-    /* Desktop: imagem ao lado do texto, centrada verticalmente */
+    /* Desktop: imagem ao lado do texto, esticada até a altura do texto */
     @media (min-width: 768px) {
-      .about-grid { grid-template-columns: 1fr 1.45fr; align-items: center; gap: 40px; }
-      .about-portrait { aspect-ratio: auto; width: 100%; max-width: 100%; height: auto; position: static; }
+      .about-grid { grid-template-columns: 1fr 1.45fr; align-items: stretch; gap: 40px; }
+      .about-portrait { min-height: unset; position: static; }
       .about-text > div { margin-top: 20px; padding-top: 20px; }
     }
 
@@ -1059,7 +1061,7 @@
 
       .pain { padding: 72px 48px; margin: 0 24px; }
 
-      .about-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .about-grid { grid-template-columns: 1fr 1fr; gap: 32px; align-items: stretch; }
       #sobre { padding: 40px 0; }
 
       .areas-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -1430,7 +1432,7 @@
          HERO
          ========================================================= -->
     <section class="hero" id="topo" aria-labelledby="heroTitle">
-      <img class="hero-video" src="hero.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+      <img class="hero-video" src="Hero V2.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="container hero-top">
@@ -1541,7 +1543,7 @@
           </div>
         </div>
         <figure class="about-portrait reveal" aria-label="Retrato de Jaqueline Santinho">
-          <img src="jaqueline-jaquetasf.png" alt="Jaqueline Santinho, engenheira química, vestindo jaqueta" loading="lazy" decoding="async" />
+          <img src="sobre-jaqueline-1-clean.png" alt="Jaqueline Santinho, engenheira química, vestindo jaqueta" loading="lazy" decoding="async" />
         </figure>
       </div>
     </section>
@@ -1832,7 +1834,7 @@
          ========================================================= -->
     <section class="scroll-video-section" aria-label="Jaqueline Santinho, consultora ambiental">
       <div class="video-wrap">
-        <img src="jaqueline-socialcintura.png" alt="Jaqueline Santinho, engenheira química e consultora ambiental" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;" />
+        <img src="Hero V2.png" alt="Jaqueline Santinho, engenheira química e consultora ambiental" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;" />
         <div class="video-overlay" aria-hidden="true"></div>
       </div>
     </section>
